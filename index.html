@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<!-- rtl bootstrap 5 -->
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.rtl.min.css">
+    <link rel="stylesheet" href="assets/js/bootstrap.min.js">
+    <!-- bootstrap 5.1.3 rtl last cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <script src="assets/js/script.js"></script>
+</head>
+<style>
+    #lightSwitch {
+        transform: scale(1.8);
+    }
+</style>
+
+<body>
+
+ <!-- light box -->
+
+ <div class="d-flex">
+    <div class="form-check form-switch me-auto mt-3 ms-3">
+        <label class="form-check-label ms-2" for="lightSwitch">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-brightness-high"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </svg>
+      </label>
+        <input class="form-check-input" type="checkbox" id="lightSwitch" />
+    </div>
+</div>
+
+    <!-- form validate with js -->
+    <div class="container mt-4">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6 position-relative">
+                <label for="validationTooltip01" class="form-label">نام</label>
+                <input type="text" class="form-control" id="validationTooltip01" minlength="3" placeholder="نام..." pattern="^[ا-یa-z]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    حداقل سه حرف وارد کنید
+                </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4 gy-md-0 mt-md-3">
+                <label for="validationTooltip02" class="form-label">نام خانوادگی</label>
+                <input type="text" class="form-control" id="validationTooltip02" minlength="3" placeholder=" نام خانوادگی..." pattern="^[ا-یa-z]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    حداقل سه حرف وارد کنید
+                </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip02" class="form-label">کد ملی</label>
+                <input type="text" class="form-control" id="validationTooltip02" minlength="10" placeholder="  کدملی..." pattern="^[0-9]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    کدملی (10 رقمی) را درست وارد کنید
+                </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip02" class="form-label">ایمیل </label>
+                <input type="email" class="form-control" id="validationTooltip02" minlength="3" placeholder="  ایمیل..." required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    ایمیل را به درستی وارد کنید
+                </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip02" class="form-label">شماره تماس</label>
+                <input type="text" class="form-control" id="validationTooltip02" minlength="11" placeholder=" شماره موبایل ..." pattern="^[0-9]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    شماره تماس را درست وارد کنید
+                </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip03" class="form-label">شهر</label>
+                <input type="text" class="form-control" id="validationTooltip03" minlength="2" pattern="^[ا-یa-z]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    لطفا نام شهر را درست وارد کنید </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip04" class="form-label">استان</label>
+                <select class="form-select" id="validationTooltip04" minlength="2" pattern="^[ا-یa-z]*$" required>
+            <option selected disabled value="">انتخاب...</option>
+            <option>اصفهان</option>
+            <option >تهران</option>
+            <option >همدان</option>
+            <option >مازندران</option>
+            <option >مشهد</option>
+            <option >تبریز</option>
+          </select>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    لطفا نام استان را انتخاب کنید </div>
+            </div>
+            <div class="col-md-6 position-relative gy-4">
+                <label for="validationTooltip05" class="form-label">پیش شماره</label>
+                <input type="text" class="form-control" id="validationTooltip05" minlength="3" pattern="^[0-9]*$" required>
+                <div class="valid-tooltip">
+                    تایید
+                </div>
+                <div class="invalid-tooltip">
+                    لطفا پیش شماره را درست وارد کنید </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-25 mt-3" type="submit">ارسال</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Example starter JavaScript for form submissions if there are invalid fields
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+
+
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-5" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav vertical -->
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+
+    <br>
+    <!-- col-sample -->
+    <div class="container">
+        <div class="row">
+            <div class="col border">
+                1 of 3
+            </div>
+            <div class="col-6 border">
+                col-6 (wider)
+            </div>
+            <div class="col border">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+                1 of 3
+            </div>
+            <div class="col-5 border">
+                col-5 (wider)
+            </div>
+            <div class="col border">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- offcanvas -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="validationDefault01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefault02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefaultUsername" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">City</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationDefault04" class="form-label">State</label>
+                            <select class="form-select" id="validationDefault04" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationDefault05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationDefault05" required>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input ms-3" type="checkbox" value="" id="invalidCheck2" required>
+                                <label class="form-check-label" for="invalidCheck2">
+                              Agree to terms and conditions
+                            </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- card -->
+    <div class="col-6 col-md-3 mx-auto">
+        <div class="card mb-3 ">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/img/1234572961_-galaxy-tab-a7-104-sm-t505-64.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- toast -->
+    <div class="toast show">
+        <div class="toast-header">
+            <strong class="me-auto">Toast Header</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            <p>Some text inside the toast body</p>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="toastbtn">Show Toast</button>
+
+    <div class="toast">
+        <div class="toast-header">
+            <strong class="me-auto">Toast Header</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            <p>Some text inside the toast body</p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        document.getElementById("toastbtn").onclick = function() {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+            })
+            toastList.forEach(toast => toast.show())
+        }
+    </script>
+
+    <div class="toast show align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    <br>
+
+
+    <!-- shadow -->
+    <div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">lg shadow</div>
+
+
+    <!-- range -->
+    <label for="customRange1" class="form-label">Example range</label>
+    <input type="range" class="form-range" id="customRange1">
+
+    <!-- btn-close -->
+    <button type="button" class="btn-close" aria-label="Close"></button>
+    <br>
+
+
+    <!-- badge on btn -->
+    <button type="button" class="btn btn-primary btn-lg position-relative m-5">
+        Inbox
+        <span class="position-absolute top-0 start-0  translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    <button type="button" class="btn btn-primary position-relative">
+        Profile
+        <span class="position-absolute top-0 start-0 translate-middle p-2 bg-danger border border-light rounded-circle">
+          <span class="visually-hidden">New alerts</span>
+        </span>
+      </button>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Item 1</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Item 2</a>
+                        <a class="nav-link" href="#item-3">Item 3</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+            <div class="col-6">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                    <h4 id="item-1">Item 1</h4>
+                    <p>...</p>
+                    <h5 id="item-1-1">Item 1-1</h5>
+                    <p>...</p>
+                    <h5 id="item-1-2">Item 1-2</h5>
+                    <p>...</p>
+                    <h4 id="item-2">Item 2</h4>
+                    <p>...</p>
+                    <h4 id="item-3">Item 3</h4>
+                    <p>...</p>
+                    <h5 id="item-3-1">Item 3-1</h5>
+                    <p>...</p>
+                    <h5 id="item-3-2">Item 3-2</h5>
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> -->
+
+    <br>
+
+
+    <!-- cards -->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a short card.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- clearfix card -->
+    <div class="container">
+        <div class="clearfix border">
+            <img src="assets/img/1234572181_-galaxy-s20-fe-5g-sm-g781bds-256-8-.jpeg" class="col-md-3 float-md-start mb-3 ms-md-4" alt="...">
+
+            <p>
+            </p>
+
+            <p>
+                As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at.
+                It simply takes up space and should not really be read.
+            </p>
+
+            <p>
+                And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+            </p>
+        </div>
+    </div>
+    <br><br><br>
+
+
+
+    <!-- col offset -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 border">.col-md-4</div>
+            <div class="col-md-4 offset-md-2 border">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-3 offset-md-3 border">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-3 border">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 border">.col-md-6 .offset-md-3</div>
+        </div>
+    </div>
+    <br><br><br>
+
+
+
+    <!--row justify-content-start, center, end, around, between, evenly -->
+    <div class="container">
+        <div class="row justify-content-start ">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2 ">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-end mt-2">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-around mt-2">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-between mt-2">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-2">
+            <div class="col-4 border">
+                One of two columns
+            </div>
+            <div class="col-4 border">
+                One of two columns
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+    <!-- gutter -->
+    <div class="container px-4 my-3">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column gutter padding</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column gutter padding</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- bg-opacity -->
+    <div class="bg-success p-2 text-white">This is default success background</div>
+    <div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
+    <div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+    <div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+    <div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+    <br>
+
+
+    <!-- btn-opacity -->
+    <div class="d-flex">
+        <div class="opacity-100"><button class="btn btn-primary" type="button">Text</button></div>
+        <div class="opacity-75"><button class="btn btn-primary" type="button">Text</button></div>
+        <div class="opacity-50"><button class="btn btn-primary" type="button">Text</button></div>
+        <div class="opacity-25"><button class="btn btn-primary" type="button">Text</button></div>
+    </div>
+    <br><br>
+
+
+    <!-- start end top bottom position -->
+    <div class="position-relative ">
+        <div class="position-absolute top-0 start-0 border">dtg</div>
+        <div class="position-absolute top-0 end-0 border">dewrwe</div>
+        <div class="position-absolute top-50 start-50 border">ddffdf</div>
+        <div class="position-absolute bottom-50 end-50 border">324</div>
+        <div class="position-absolute bottom-0 start-0 border">5675</div>
+        <div class="position-absolute bottom-0 end-0 border">8768</div>
+    </div>
+    <br><br>
+
+
+    <!-- mx-auto center -->
+    <div class="mx-auto" style="width: 200px;">
+        Centered element
+    </div>
+
+
+    <!-- grid & gap -->
+    <div class="d-grid gap-2">
+        <div class="p-2 bg-light border">Grid item 1</div>
+        <div class="p-2 bg-light border">Grid item 2</div>
+        <div class="p-2 bg-light border">Grid item 3</div>
+    </div>
+    <br><br><br>
+
+
+    <!-- font size(fs) -->
+    <p class="fs-1">.fs-1 text</p>
+    <p class="fs-2">.fs-2 text</p>
+    <p class="fs-3">.fs-3 text</p>
+    <p class="fs-4">.fs-4 text</p>
+    <p class="fs-5">.fs-5 text</p>
+    <p class="fs-6">.fs-6 text</p>
+
+
+    <!-- text bold weight -->
+    <p class="fw-bold">Bold text.</p>
+    <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+    <p class="fw-normal">Normal weight text.</p>
+    <p class="fw-light">Light weight text.</p>
+    <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+    <p class="fst-italic">Italic text.</p>
+    <p class="fst-normal">Text with normal font style</p>
+    <br>
+
+    <!-- line height (lh) -->
+    <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+    <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+    <p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+    <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+    <br><br>
+    <p class="text-decoration-underline">This text has a line underneath it.</p>
+    <p class="text-decoration-line-through">This text has a line going through it.</p>
+    <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+
+    <!-- js toast -->
+    <script>
+        document.getElementById("toastbtn").onclick = function() {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+            })
+            toastList.forEach(toast => toast.show())
+        }
+    </script>
+    <script>
+        /**
+         *  Light Switch @version v0.1.3
+         */
+
+        (function() {
+            let lightSwitch = document.getElementById("lightSwitch");
+            if (!lightSwitch) {
+                return;
+            }
+
+            /**
+             * @function darkmode
+             * @summary: changes the theme to 'dark mode' and save settings to local stroage.
+             * Basically, replaces/toggles every CSS class that has '-light' class with '-dark'
+             */
+            function darkMode() {
+                document.querySelectorAll(".bg-light").forEach((element) => {
+                    element.className = element.className.replace(/-light/g, "-dark");
+                });
+
+                document.body.classList.add("bg-dark");
+
+                if (document.body.classList.contains("text-dark")) {
+                    document.body.classList.replace("text-dark", "text-light");
+                } else {
+                    document.body.classList.add("text-light");
+                }
+
+                // set light switch input to true
+                if (!lightSwitch.checked) {
+                    lightSwitch.checked = true;
+                }
+                localStorage.setItem("lightSwitch", "dark");
+            }
+
+            /**
+             * @function lightmode
+             * @summary: changes the theme to 'light mode' and save settings to local stroage.
+             */
+            function lightMode() {
+                document.querySelectorAll(".bg-dark").forEach((element) => {
+                    element.className = element.className.replace(/-dark/g, "-light");
+                });
+
+                document.body.classList.add("bg-light");
+
+                if (document.body.classList.contains("text-light")) {
+                    document.body.classList.replace("text-light", "text-dark");
+                } else {
+                    document.body.classList.add("text-dark");
+                }
+
+                if (lightSwitch.checked) {
+                    lightSwitch.checked = false;
+                }
+                localStorage.setItem("lightSwitch", "light");
+            }
+
+            /**
+             * @function onToggleMode
+             * @summary: the event handler attached to the switch. calling @darkMode or @lightMode depending on the checked state.
+             */
+            function onToggleMode() {
+                if (lightSwitch.checked) {
+                    darkMode();
+                } else {
+                    lightMode();
+                }
+            }
+
+            /**
+             * @function getSystemDefaultTheme
+             * @summary: get system default theme by media query
+             */
+            function getSystemDefaultTheme() {
+                const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+                if (darkThemeMq.matches) {
+                    return "dark";
+                }
+                return "light";
+            }
+
+            function setup() {
+                var settings = localStorage.getItem("lightSwitch");
+                if (settings == null) {
+                    settings = getSystemDefaultTheme();
+                }
+
+                if (settings == "dark") {
+                    lightSwitch.checked = true;
+                }
+
+                lightSwitch.addEventListener("change", onToggleMode);
+                onToggleMode();
+            }
+
+            setup();
+
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
